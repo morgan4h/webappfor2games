@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 10px;
+}
+
+nav a {
+    color: inherit;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    width: 60%;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-top: 5%;
+    text-transform: uppercase;
+}
+
+nav ul li::after {
+    content: '|';
+    font-size: 40px;
+    border-color: red;
+    border: 1px rgb(212, 25, 212) solid;
+    padding: 10px;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    color: rgb(212, 25, 212);
+    text-decoration: underline;
+}
+
+
+
+h1 {
+    letter-spacing: 3px;
+    color: rgb(212, 25, 212);
+    width: 20%;
+    align-self: center;
+    text-align: center;
+    /* background-color: purple; */
+}
+
+nav .btn-play {
+    /* border: rgb(16, 235, 16) 6px solid; */
+     height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    align-self: center;
+    background-color: rgb(212, 25, 212);
+    color: white;
+    border-radius: 10px;
+}
+
+.responsive-item {
+    display: none;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    align-self: center;
+    background-color: rgb(212, 25, 212);
+    color: white;
+    border-radius: 10px;
+}
+
+.close {
+    display: none;
+    position: absolute;
+    background-color: red;
+    width: 40px;
+    cursor: pointer;
+}
+
+
+/* start hearder section */
+
+header {
+    /* background-color: red; */
+    height: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3%;
+}
+
+header iframe {
+    width: 50%;
+    border: yellow 10px solid;
+    border-radius: 15px;
+    /* background-color: blue; */
+      height: 500px;
+      /* padding-top: 40px; */
+      /* padding-left: 15px; */
+}
+
+header .char {
+    background-color: yellow;
+    height: 10px;
+    width: 10%;
+    height: 400px;
+    text-align: center;
+    position: relative;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================================================= */
+/* =================  REsponsive design         ============================================== */
+/* ====================================================================================== */
+
+/* create responsive template for nav  (phone)*/
+
+@media screen and (min-width: 160px) and (max-width: 500px) {
+  body {
+    /* background-color: red; */
+  }
+  ul {
+    display: none;
+    /* display: block; */
+    position: absolute;
+    background: black;
+    color: white;
+    top: 58px;
+    padding: 38px;
+    border-radius: 21px;
+    flex-direction: column;
+  }
+  ul li {
+    width: 100%;
+    margin-bottom: 28px;
+  }
+  .responsive-item {
+    display: block;
+  }
+  .close {
+    display: block;
+  }
+}
+
+/* for tablet */
+
+@media screen and (min-width: 501px) and (max-width: 800px) { 
+
+    nav ul li::after {
+    content: '|';
+    display: none;
+    font-size: 40px;
+    border-color: red;
+    border: 1px rgb(212, 25, 212) solid;
+    padding: 0px;
+    margin-left: 0px;
+    cursor: pointer;
+}
+
+}
